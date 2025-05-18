@@ -1,0 +1,154 @@
+/* Reset basique */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px 40px;
+    color: #2c3e50;
+    line-height: 1.5;
+  }
+  
+  /* Conteneur global */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #34495e;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Groupes (sections) */
+  .group {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Ligne question/réponse en 2 colonnes */
+  .question-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Colonne question (label + description) */
+  .question-label {
+    flex: 1 1 40%;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #34495e;
+    min-width: 200px;
+  }
+  
+  /* Description en plus petit */
+  .question-description {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+    margin-top: 0.3rem;
+    font-style: italic;
+  }
+  
+  /* Colonne réponse */
+  .answer-value {
+    flex: 1 1 55%;
+    min-width: 250px;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 1rem;
+    color: #2c3e50;
+  }
+  
+  /* Badges réponses enum / multi-enum */
+  .answer-badge {
+    display: inline-block;
+    background: #d6e9ff;
+    border: 1px solid #7db0ff;
+    border-radius: 9999px;
+    padding: 6px 16px;
+    margin: 0 8px 8px 0;
+    color: #2a5db0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 93, 204, 0.25);
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-badge:hover {
+    background-color: #aecbff;
+  }
+  
+  /* Texte multiligne */
+  .textarea-answer {
+    margin-top: 0.75rem;
+    background-color: #f7faff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    color: #34495e;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.07);
+    border: 1px solid #cbd6e2;
+  }
+  
+  /* Tableau des pays */
+  .country-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(50, 50, 93, 0.11);
+  }
+  
+  .country-table th,
+  .country-table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e1e9f0;
+  }
+  
+  .country-table th {
+    background-color: #007acc;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .country-table tbody tr:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Responsive - pour écrans étroits */
+  @media (max-width: 720px) {
+    .question-row {
+      flex-direction: column;
+    }
+  
+    .question-label,
+    .answer-value {
+      flex: 1 1 100%;
+      min-width: auto;
+    }
+  
+    .country-table th,
+    .country-table td {
+      padding: 10px 14px;
+    }
+  }
+  
